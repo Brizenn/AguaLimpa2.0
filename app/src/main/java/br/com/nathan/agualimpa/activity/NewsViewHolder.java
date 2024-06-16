@@ -17,9 +17,9 @@ public  class NewsViewHolder extends RecyclerView.ViewHolder {
 
     public NewsViewHolder(@NonNull View itemView) {
         super(itemView);
-        textViewTitle = itemView.findViewById(R.id.textViewTitle);
-        textViewDescription = itemView.findViewById(R.id.textViewDescription);
-        textViewCategory = itemView.findViewById(R.id.textViewCategory);
+        textViewTitle = itemView.findViewById(R.id.newsTitle);
+        textViewDescription = itemView.findViewById(R.id.newsDescription);
+        textViewCategory = itemView.findViewById(R.id.newsCategory);
     }
 
     public void bind(News news) {

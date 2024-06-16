@@ -5,28 +5,32 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewTitle"
+    <ImageView
+        android:id="@+id/newsImage"
         android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="" />
+
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        android:paddingTop="8dp" />
 
     <TextView
-        android:id="@+id/textViewDescription"
-        android:layout_width="match_parent"
+        android:id="@+id/newsDescription"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"/>
+        android:paddingTop="4dp" />
 
     <TextView
-        android:id="@+id/textViewCategory"
-        android:layout_width="match_parent"
+        android:id="@+id/newsCategory"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="14sp"
-        android:textColor="@android:color/black"/>
+        android:paddingTop="4dp"
+        android:textStyle="italic" />
 
 </LinearLayout>

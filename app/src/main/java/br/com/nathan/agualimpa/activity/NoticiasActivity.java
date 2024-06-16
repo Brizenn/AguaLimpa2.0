@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.nathan.agualimpa.R;
-import br.com.nathan.agualimpa.activity.NewsAdapter;
 import br.com.nathan.agualimpa.model.News;
 
 public class NoticiasActivity extends AppCompatActivity {
@@ -35,9 +34,9 @@ public class NoticiasActivity extends AppCompatActivity {
         recyclerViewNews.setAdapter(newsAdapter);
 
         // Adicione notícias de exemplo (opcional, dependendo da sua lógica de aplicativo)
-        newsList.add(new News("Título da Notícia 1", "Descrição da Notícia 1", "Geral"));
-        newsList.add(new News("Título da Notícia 2", "Descrição da Notícia 2", "Região"));
-        newsList.add(new News("Título da Notícia 3", "Descrição da Notícia 3", "Novidades"));
+        newsList.add(new News("ÁGUA POTAVEL EM SANTA CATARINA", "Água potavel em Santa Cataria está disponivel para o público", "Geral", R.drawable.urgente));
+        newsList.add(new News("Título da Notícia 2", "Descrição da Notícia 2", "Região", R.drawable.aguaa));
+        newsList.add(new News("Título da Notícia 3", "Descrição da Notícia 3", "Novidades", R.drawable.aguaaa));
 
         // Notifique o adapter que os dados foram alterados
         newsAdapter.notifyDataSetChanged();
