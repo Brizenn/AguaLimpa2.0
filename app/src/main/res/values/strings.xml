@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">agualimpa</string>
+    <array name="tipo_de_usuario">
+        <item>Cidadão</item>
+        <item>Pesquisador</item>
+    </array>
+</resources>

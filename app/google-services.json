@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "433806423163",
+    "firebase_url": "https://agua-limpa-c5762-default-rtdb.firebaseio.com",
+    "project_id": "agua-limpa-c5762",
+    "storage_bucket": "agua-limpa-c5762.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433806423163:android:d78fe91fe3bbf9ffc69ede",
+        "android_client_info": {
+          "package_name": "br.com.nathan.agualimpa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvWy5wAFGtQjQUETucSwZEVeyFplRQuh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

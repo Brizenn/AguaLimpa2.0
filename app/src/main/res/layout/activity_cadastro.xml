@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_background"
+    android:gravity="clip_horizontal|center|clip_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    tools:context=".activity.CadastroActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFeatureSettings="@font/berkshire_swash"
+        android:fontFamily="@font/berkshire_swash"
+        android:text="Água Limpa"
+        android:textColor="#2D5777"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_texto"
+        android:drawableLeft="@drawable/baseline_account_box_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#2D5777"
+        android:textColorHint="#2D5777" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_texto"
+        android:drawableLeft="@drawable/baseline_attach_email_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text|textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#2D5777" />
+
+    <EditText
+        android:id="@+id/editTextCPF"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_texto"
+        android:drawableLeft="@drawable/baseline_admin_panel_settings_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#2D5777" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_texto"
+        android:drawableLeft="@drawable/baseline_beenhere_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="text|textPassword"
+        android:padding="10dp"
+        android:textColor="#FDFBFB"
+        android:textColorHint="#2D5777" />
+
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_texto"
+        android:entries="@array/tipo_de_usuario"
+        android:padding="10dp"
+        android:paddingRight="44dp" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/background_botao"
+        android:text="Cadastrar" />
+
+</LinearLayout>
+
+
