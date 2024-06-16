@@ -12,6 +12,16 @@
     android:paddingRight="32dp"
     tools:context=".activity.LoginActivity">
 
+
+    <!-- Borda destacada -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/border_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -83,5 +93,5 @@
         android:background="@drawable/background_button_cadastre_se"
         android:text="Cadastre-se"
         android:textColor="#0D20A6" />
-
+    </LinearLayout>
 </LinearLayout>

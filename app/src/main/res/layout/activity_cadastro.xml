@@ -12,6 +12,15 @@
     android:paddingRight="32dp"
     tools:context=".activity.CadastroActivity">
 
+    <!-- Borda destacada -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/border_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -101,7 +110,7 @@
         android:layout_marginBottom="15dp"
         android:background="@drawable/background_botao"
         android:text="Cadastrar" />
-
+    </LinearLayout>
 </LinearLayout>
 
 
