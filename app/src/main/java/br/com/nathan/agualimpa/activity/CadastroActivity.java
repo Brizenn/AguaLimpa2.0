@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import br.com.nathan.agualimpa.R;
 import br.com.nathan.agualimpa.Util.ConfiguraBd;
 import br.com.nathan.agualimpa.model.Usuario;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroActivity extends Activity {
 
@@ -34,7 +36,7 @@ public class CadastroActivity extends Activity {
 
     Spinner spinnerTipo;
 
-
+    private DatabaseReference referenciaDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,7 @@ public class CadastroActivity extends Activity {
     inicializar();
     //validarCampos
 
-
+        referenciaDatabase = FirebaseDatabase.getInstance().getReference(); // Inicializa a referência do Firebase Database
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,37 +102,45 @@ public class CadastroActivity extends Activity {
 
     }
 
-    private void cadastrarUsuario(){
-
+    private void cadastrarUsuario() {
         autentificacao = ConfiguraBd.Firebaseautentificacao();
 
         autentificacao.createUserWithEmailAndPassword(
-                usuario.getEmail(),usuario.getSenha()
+                usuario.getEmail(), usuario.getSenha()
         ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(CadastroActivity.this,"Sucesso ao cadastrar um Usuario", Toast.LENGTH_SHORT).show();
-                }else {//mudei aqui
+                if (task.isSuccessful()) {
+                    // Salvando os dados no Realtime Database
+                    String userId = autentificacao.getCurrentUser().getUid();
+                    referenciaDatabase.child("usuarios").child(userId).setValue(usuario)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(CadastroActivity.this, "Sucesso ao cadastrar um Usuario", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(CadastroActivity.this, "Erro ao salvar dados do usuario", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                } else {
                     String exececao = "";
-
                     try {
                         throw task.getException();
-                    }catch (FirebaseAuthWeakPasswordException e){
-                        exececao ="digite uma senha mais forte";
-                    }catch (FirebaseAuthInvalidCredentialsException e){
-                        exececao ="Digite um email válido";
-                    }catch (FirebaseAuthUserCollisionException e){
-                        exececao ="Esta conta já existe";
-                    }catch (Exception e){
-                        exececao ="Erro ao cadastrar usuario"+ e.getMessage();
+                    } catch (FirebaseAuthWeakPasswordException e) {
+                        exececao = "Digite uma senha mais forte";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        exececao = "Digite um email válido";
+                    } catch (FirebaseAuthUserCollisionException e) {
+                        exececao = "Esta conta já existe";
+                    } catch (Exception e) {
+                        exececao = "Erro ao cadastrar usuario: " + e.getMessage();
                         e.printStackTrace();
                     }
-                    Toast.makeText(CadastroActivity.this,exececao, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CadastroActivity.this, exececao, Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
-
     }
 }
