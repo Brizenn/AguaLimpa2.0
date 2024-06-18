@@ -34,7 +34,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         holder.newsTitle.setText(news.getTitle());
         holder.newsDescription.setText(news.getDescription());
         holder.newsCategory.setText(news.getCategory());
-        holder.newsImage.setImageResource(news.getImageResourceId()); // Adicionado
+        holder.newsImage.setImageResource(news.getImageResourceId());
     }
 
     @Override
@@ -44,14 +44,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     public static class NewsViewHolder extends RecyclerView.ViewHolder {
         TextView newsTitle, newsDescription, newsCategory;
-        ImageView newsImage; // Adicionado
+        ImageView newsImage;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
             newsTitle = itemView.findViewById(R.id.newsTitle);
             newsDescription = itemView.findViewById(R.id.newsDescription);
             newsCategory = itemView.findViewById(R.id.newsCategory);
-            newsImage = itemView.findViewById(R.id.newsImage); // Adicionado
+            newsImage = itemView.findViewById(R.id.newsImage);
         }
     }
 }

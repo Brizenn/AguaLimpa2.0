@@ -1,6 +1,7 @@
 package br.com.nathan.agualimpa.activity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +19,8 @@ public class NoticiasActivity extends AppCompatActivity {
     private NewsAdapter newsAdapter;
     public static List<News> newsList = new ArrayList<>();
 
+    Button lancar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,18 +30,23 @@ public class NoticiasActivity extends AppCompatActivity {
         recyclerViewNews = findViewById(R.id.recyclerViewNews);
         recyclerViewNews.setLayoutManager(new LinearLayoutManager(this));
 
-        // Inicialize o NewsAdapter com a lista de notícias
+
         newsAdapter = new NewsAdapter(newsList);
 
-        // Defina o adapter para o RecyclerView
+
         recyclerViewNews.setAdapter(newsAdapter);
 
-        // Adicione notícias de exemplo (opcional, dependendo da sua lógica de aplicativo)
+        // Adicione notícias de exemplo
         newsList.add(new News("ÁGUA POTAVEL EM SANTA CATARINA", "Água potavel em Santa Cataria está disponivel para o público", "Geral", R.drawable.urgente));
-        newsList.add(new News("Título da Notícia 2", "Descrição da Notícia 2", "Região", R.drawable.aguaa));
-        newsList.add(new News("Título da Notícia 3", "Descrição da Notícia 3", "Novidades", R.drawable.aguaaa));
+        newsList.add(new News("galão D'água", "deposito oferece água para desabrigados", "Região de Porto Alegre", R.drawable.aguaa));
+        newsList.add(new News("ÁGUA testada e aprovada", "PESQUISADOR testou as águas e constou que contem virus de leptospirose", "Novidades", R.drawable.aguaaa));
 
-        // Notifique o adapter que os dados foram alterados
+
         newsAdapter.notifyDataSetChanged();
+
+
+
+
+
     }
 }

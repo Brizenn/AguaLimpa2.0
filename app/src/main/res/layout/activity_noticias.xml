@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Barra de rolagem horizontal para os botões -->
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -49,7 +49,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- RecyclerView para exibir as notícias -->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewNews"
             android:layout_width="match_parent"
