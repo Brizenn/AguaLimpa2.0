@@ -1,12 +1,13 @@
 package br.com.nathan.agualimpa.model;
 
 public class Usuario {
+    private String nome;
+    private String email;
+    private String cpf;
+    private String senha;
+    private String tipo;
 
-    private String nome,email,CPF,senha,spinner;
-
-
-    public Usuario() {
-    }
+    // Getters e Setters
 
     public String getNome() {
         return nome;
@@ -25,11 +26,11 @@ public class Usuario {
     }
 
     public String getCPF() {
-        return CPF;
+        return cpf;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setCPF(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getSenha() {
@@ -40,11 +41,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getSpinner() {
-        return spinner;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setSpinner(String spinner) {
-        this.spinner = spinner;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

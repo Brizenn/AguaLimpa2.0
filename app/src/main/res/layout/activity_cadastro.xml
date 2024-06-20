@@ -99,7 +99,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/background_texto"
-        android:entries="@array/tipo_de_usuario"
+        android:entries="@array/tipos_usuarios"
         android:padding="10dp"
         android:paddingRight="44dp" />
 

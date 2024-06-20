@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">agualimpa</string>
-    <array name="tipo_de_usuario">
-        <item>Cidadão</item>
+    <string-array name="tipos_usuarios">
         <item>Pesquisador</item>
-    </array>
+        <item>Cidadão</item>
+    </string-array>
 </resources>
