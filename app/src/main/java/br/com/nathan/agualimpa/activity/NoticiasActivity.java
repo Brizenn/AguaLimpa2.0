@@ -3,6 +3,7 @@ package br.com.nathan.agualimpa.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -39,7 +40,6 @@ public class NoticiasActivity extends AppCompatActivity {
         buttonLancarNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implemente aqui a lógica para lançar notícias
                 startActivity(new Intent(NoticiasActivity.this, Ad_noticiasActivity.class));
             }
         });
@@ -75,6 +75,8 @@ public class NoticiasActivity extends AppCompatActivity {
                     Toast.makeText(NoticiasActivity.this, "Erro ao verificar o tipo de usuário.", Toast.LENGTH_SHORT).show();
                 }
             });
+
+
         }
     }
 }

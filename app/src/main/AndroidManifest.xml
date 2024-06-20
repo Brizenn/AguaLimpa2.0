@@ -16,6 +16,14 @@
         <activity android:name=".activity.NewsAdapter"
             android:exported="false"/>
         <activity
+            android:name=".activity.Ad_noticiasActivity"
+            android:label="Adicionar Notícias"
+            android:parentActivityName=".activity.NoticiasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.NoticiasActivity" />
+        </activity>
+        <activity
             android:name=".activity.NoticiasActivity"
             android:exported="false" />
         <activity
